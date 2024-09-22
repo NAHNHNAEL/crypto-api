@@ -1,5 +1,5 @@
 import express from 'express';
-import getTokenPriceByNameRouter from './api/getTokenPriceByNameRouter.js';
+import getTokenPriceByNameRouter from '../api/getTokenPriceByNameRouter.js';
 
 const apiRouter = express.Router();
 

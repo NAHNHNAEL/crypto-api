@@ -1,5 +1,5 @@
 import express from 'express';
-import { getCachedPrice } from '../../services/priceService.js';
+import { getCachedPrice } from '../services/priceService.js';
 
 const router = express.Router();
 
