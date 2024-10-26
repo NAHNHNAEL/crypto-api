@@ -1,9 +1,6 @@
 const ccxt = require('ccxt');
 const TokenPrice = require('../models/token-price.js');
 
-// Biến lưu trữ giá token
-const cachedPrices = {};
-
 // Biến lưu trữ các token cần theo dõi định kỳ
 let tokensToTrack = [
     { exchange: 'binance', token: 'BTC' },

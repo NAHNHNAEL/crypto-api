@@ -17,8 +17,7 @@ const tokenPriceSchema = new mongoose.Schema({
   timestamp: {
     type: Date,
     required: true,
-    default: Date.now,
-    expires: 300, // Giữ dữ liệu trong 5 phút
+    default: Date.now
   },
 });
 
