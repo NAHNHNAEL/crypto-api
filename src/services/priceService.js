@@ -62,21 +62,5 @@ const upsertTokenPrice = async (symbol, price, exchange) => {
     }
   };
 
-// Hàm khởi động cập nhật giá định kỳ
-const startPriceUpdater = () => {
-    // Lấy giá ngay khi khởi động server
-    tokensToTrack.forEach(({ exchange, token }) => {
-        fetchTokenPrice(exchange, token);
-    });
-
-    // Thiết lập cập nhật mỗi 60 giây
-    setInterval(() => {
-        tokensToTrack.forEach(({ exchange, token }) => {
-            fetchTokenPrice(exchange, token);
-        });
-    }, 180 * 1000); // 180 giây
-};
-
-
 // Xuất các hàm cần thiết
-module.exports = { fetchTokenPrice, getTokenPrice, upsertTokenPrice, startPriceUpdater };
+module.exports = { fetchTokenPrice, getTokenPrice, upsertTokenPrice };

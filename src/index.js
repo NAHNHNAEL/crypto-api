@@ -1,8 +1,8 @@
 const express = require('express');
 const apiRouter = require('./routers/apiRouter.js');
-const { startPriceUpdater } = require('./services/priceService.js');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+const updatePrice = require('./services/updatePrice.js');
 
 dotenv.config();
 
