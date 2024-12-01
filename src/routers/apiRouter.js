@@ -1,8 +1,11 @@
-import express from 'express';
-import getTokenPriceByNameRouter from '../api/getTokenPriceByNameRouter.js';
+const express = require('express');
+const getTokenPriceByNameRouter = require('../api/getTokenPriceByNameRouter.js');
+const getPriceInfo = require('../api/getPriceInfoRouter.js');
 
 const apiRouter = express.Router();
 
 apiRouter.use('/getTokenPriceByName', getTokenPriceByNameRouter);
+apiRouter.use('/getPriceInfo', getPriceInfo);
 
-export default apiRouter;
+
+module.exports = apiRouter;
